@@ -1,0 +1,35 @@
+
+---
+
+### 🧾 **2. CITATION.cff (Final)**
+
+```yaml
+cff-version: 1.2.0
+title: "Equity-Adjusted Thresholds for Safe Maternal Delivery"
+authors:
+  - family-names: Adetunji
+    given-names: Sunday A.
+    affiliation: College of Health, Oregon State University, USA
+    orcid: https://orcid.org/0000-0001-9321-9957
+  - family-names: Adetunji
+    given-names: Oluwatimileyin
+    affiliation: Department of Economics, Bowen University, Nigeria
+  - family-names: Oyewusi
+    given-names: Rhoda Olubunmi
+    affiliation: Department of Midwifery
+license: CC-BY-4.0
+repository-code: https://github.com/drsunday-ade/equity-thresholds-maternal-delivery
+abstract: >
+  Global within-country causal analysis (2000–2022) identifying empirical thresholds of institutional-birth coverage
+  associated with accelerated declines in maternal mortality, adjusted for anemia, adolescent fertility, and equity factors.
+doi: 10.5281/zenodo.17322106
+https://doi.org/10.5281/zenodo.17322106 
+date-released: 2025-10-11
+keywords:
+  - maternal mortality
+  - institutional births
+  - causal inference
+  - threshold models
+  - global health equity
+  - WHO
+  - SDG 3.1
