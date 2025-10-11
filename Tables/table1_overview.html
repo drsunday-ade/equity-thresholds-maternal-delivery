@@ -1,0 +1,93 @@
+<!-- preamble start -->
+
+    <script>
+
+      function styleCell_xvoa0nw1ia3yr7fhwywh(i, j, css_id) {
+          var table = document.getElementById("tinytable_xvoa0nw1ia3yr7fhwywh");
+          var cell = table.querySelector(`[data-row="${i}"][data-col="${j}"]`);
+          if (cell) {
+              console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
+              cell.classList.add(css_id);
+          } else {
+              console.warn(`Cell at (${i}, ${j}) not found.`);
+          }
+      }
+      function spanCell_xvoa0nw1ia3yr7fhwywh(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_xvoa0nw1ia3yr7fhwywh");
+        const targetCell = table.querySelector(`[data-row="${i}"][data-col="${j}"]`);
+        if (!targetCell) {
+          console.warn(`Cell at (${i}, ${j}) not found.`);
+        }
+
+        // Get all cells that need to be removed
+        const cellsToRemove = [];
+        for (let r = 0; r < rowspan; r++) {
+          for (let c = 0; c < colspan; c++) {
+            if (r === 0 && c === 0) continue; // Skip the target cell
+            const cell = table.querySelector(`[data-row="${i + r}"][data-col="${j + c}"]`);
+            if (cell) {
+              cellsToRemove.push(cell);
+            }
+          }
+        }
+
+        // Remove all cells
+        cellsToRemove.forEach(cell => cell.remove());
+
+        // Set rowspan and colspan of the target cell if it exists
+        if (targetCell) {
+          targetCell.rowSpan = rowspan;
+          targetCell.colSpan = colspan;
+        }
+      }
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '1', j: 0 }, { i: '1', j: 1 }, { i: '1', j: 2 }, { i: '1', j: 3 }, { i: '1', j: 4 }, { i: '1', j: 5 }, { i: '1', j: 6 },  ], css_id: 'tinytable_css_xmd9hfmiwr49dirs5pci',}, 
+          { positions: [ { i: '0', j: 0 }, { i: '0', j: 1 }, { i: '0', j: 2 }, { i: '0', j: 3 }, { i: '0', j: 4 }, { i: '0', j: 5 }, { i: '0', j: 6 },  ], css_id: 'tinytable_css_o2u9hblj2dxh6svwkqp4',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  styleCell_xvoa0nw1ia3yr7fhwywh(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <style>
+      /* tinytable css entries after */
+      .table td.tinytable_css_xmd9hfmiwr49dirs5pci, .table th.tinytable_css_xmd9hfmiwr49dirs5pci { text-align: left; border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_o2u9hblj2dxh6svwkqp4, .table th.tinytable_css_o2u9hblj2dxh6svwkqp4 { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+    </style>
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_xvoa0nw1ia3yr7fhwywh" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing='true'>
+        <thead>
+        
+              <tr>
+                <th scope="col" data-row="0" data-col="0">n</th>
+                <th scope="col" data-row="0" data-col="1">countries</th>
+                <th scope="col" data-row="0" data-col="2">years</th>
+                <th scope="col" data-row="0" data-col="3">MMR_med</th>
+                <th scope="col" data-row="0" data-col="4">Inst_med</th>
+                <th scope="col" data-row="0" data-col="5">Anemia_med</th>
+                <th scope="col" data-row="0" data-col="6">AdolBR_med</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="0">23155.00</td>
+                  <td data-row="1" data-col="1">202.00</td>
+                  <td data-row="1" data-col="2">2000–2022</td>
+                  <td data-row="1" data-col="3">50.61</td>
+                  <td data-row="1" data-col="4">98.60</td>
+                  <td data-row="1" data-col="5">25.60</td>
+                  <td data-row="1" data-col="6">6.51</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->

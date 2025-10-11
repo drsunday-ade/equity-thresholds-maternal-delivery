@@ -1,0 +1,190 @@
+<!-- preamble start -->
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tinytable_pfqm7aqmykv6j9gog38s</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+<!-- preamble end -->
+
+    <script>
+
+      function styleCell_pfqm7aqmykv6j9gog38s(i, j, css_id) {
+          var table = document.getElementById("tinytable_pfqm7aqmykv6j9gog38s");
+          var cell = table.querySelector(`[data-row="${i}"][data-col="${j}"]`);
+          if (cell) {
+              console.log(`Styling cell at (${i}, ${j}) with class ${css_id}`);
+              cell.classList.add(css_id);
+          } else {
+              console.warn(`Cell at (${i}, ${j}) not found.`);
+          }
+      }
+      function spanCell_pfqm7aqmykv6j9gog38s(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_pfqm7aqmykv6j9gog38s");
+        const targetCell = table.querySelector(`[data-row="${i}"][data-col="${j}"]`);
+        if (!targetCell) {
+          console.warn(`Cell at (${i}, ${j}) not found.`);
+        }
+
+        // Get all cells that need to be removed
+        const cellsToRemove = [];
+        for (let r = 0; r < rowspan; r++) {
+          for (let c = 0; c < colspan; c++) {
+            if (r === 0 && c === 0) continue; // Skip the target cell
+            const cell = table.querySelector(`[data-row="${i + r}"][data-col="${j + c}"]`);
+            if (cell) {
+              cellsToRemove.push(cell);
+            }
+          }
+        }
+
+        // Remove all cells
+        cellsToRemove.forEach(cell => cell.remove());
+
+        // Set rowspan and colspan of the target cell if it exists
+        if (targetCell) {
+          targetCell.rowSpan = rowspan;
+          targetCell.colSpan = colspan;
+        }
+      }
+      // tinytable span after
+      window.addEventListener('load', function () {
+          var cellsToStyle = [
+            // tinytable style arrays after
+          { positions: [ { i: '21', j: 1 },  ], css_id: 'tinytable_css_cr2q45ksv3we1nv8yqzy',}, 
+          { positions: [ { i: '10', j: 1 },  ], css_id: 'tinytable_css_3mtn1m84ohy55ufefy84',}, 
+          { positions: [ { i: '1', j: 1 }, { i: '2', j: 1 }, { i: '3', j: 1 }, { i: '4', j: 1 }, { i: '5', j: 1 }, { i: '6', j: 1 }, { i: '7', j: 1 }, { i: '8', j: 1 }, { i: '9', j: 1 }, { i: '14', j: 1 }, { i: '11', j: 1 }, { i: '12', j: 1 }, { i: '13', j: 1 }, { i: '18', j: 1 }, { i: '15', j: 1 }, { i: '16', j: 1 }, { i: '17', j: 1 }, { i: '19', j: 1 }, { i: '20', j: 1 },  ], css_id: 'tinytable_css_f5c2wvirppma93opkq0i',}, 
+          { positions: [ { i: '0', j: 1 },  ], css_id: 'tinytable_css_nusbcrdmf5v8w9j1lswk',}, 
+          { positions: [ { i: '21', j: 0 },  ], css_id: 'tinytable_css_aenrccqx6qdn5f2fyem2',}, 
+          { positions: [ { i: '10', j: 0 },  ], css_id: 'tinytable_css_cy7w94pd6srsm1qfmxjt',}, 
+          { positions: [ { i: '1', j: 0 }, { i: '2', j: 0 }, { i: '3', j: 0 }, { i: '4', j: 0 }, { i: '5', j: 0 }, { i: '6', j: 0 }, { i: '7', j: 0 }, { i: '8', j: 0 }, { i: '9', j: 0 }, { i: '14', j: 0 }, { i: '11', j: 0 }, { i: '12', j: 0 }, { i: '13', j: 0 }, { i: '18', j: 0 }, { i: '15', j: 0 }, { i: '16', j: 0 }, { i: '17', j: 0 }, { i: '19', j: 0 }, { i: '20', j: 0 },  ], css_id: 'tinytable_css_dxree2f3pc6m89etao88',}, 
+          { positions: [ { i: '0', j: 0 },  ], css_id: 'tinytable_css_gcfpjdg910vwx56t9c1j',}, 
+          ];
+
+          // Loop over the arrays to style the cells
+          cellsToStyle.forEach(function (group) {
+              group.positions.forEach(function (cell) {
+                  styleCell_pfqm7aqmykv6j9gog38s(cell.i, cell.j, group.css_id);
+              });
+          });
+      });
+    </script>
+
+    <style>
+      /* tinytable css entries after */
+      .table td.tinytable_css_cr2q45ksv3we1nv8yqzy, .table th.tinytable_css_cr2q45ksv3we1nv8yqzy { text-align: center; border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_3mtn1m84ohy55ufefy84, .table th.tinytable_css_3mtn1m84ohy55ufefy84 { text-align: center; border-bottom: solid black 0.05em; }
+      .table td.tinytable_css_f5c2wvirppma93opkq0i, .table th.tinytable_css_f5c2wvirppma93opkq0i { text-align: center; }
+      .table td.tinytable_css_nusbcrdmf5v8w9j1lswk, .table th.tinytable_css_nusbcrdmf5v8w9j1lswk { text-align: center; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+      .table td.tinytable_css_aenrccqx6qdn5f2fyem2, .table th.tinytable_css_aenrccqx6qdn5f2fyem2 { text-align: left; border-bottom: solid #d3d8dc 0.1em; }
+      .table td.tinytable_css_cy7w94pd6srsm1qfmxjt, .table th.tinytable_css_cy7w94pd6srsm1qfmxjt { text-align: left; border-bottom: solid black 0.05em; }
+      .table td.tinytable_css_dxree2f3pc6m89etao88, .table th.tinytable_css_dxree2f3pc6m89etao88 { text-align: left; }
+      .table td.tinytable_css_gcfpjdg910vwx56t9c1j, .table th.tinytable_css_gcfpjdg910vwx56t9c1j { text-align: left; border-top: solid #d3d8dc 0.1em; border-bottom: solid #d3d8dc 0.05em; }
+    </style>
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_pfqm7aqmykv6j9gog38s" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing='true'>
+        <thead>
+        
+              <tr>
+                <th scope="col" data-row="0" data-col="0"> </th>
+                <th scope="col" data-row="0" data-col="1">TWFE + spline (log MMR)</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td data-row="1" data-col="0">splines = ns(institutional_birth_pct, df = 3)1</td>
+                  <td data-row="1" data-col="1">−0.463</td>
+                </tr>
+                <tr>
+                  <td data-row="2" data-col="0"></td>
+                  <td data-row="2" data-col="1">(0.131)</td>
+                </tr>
+                <tr>
+                  <td data-row="3" data-col="0">splines = ns(institutional_birth_pct, df = 3)2</td>
+                  <td data-row="3" data-col="1">−1.058</td>
+                </tr>
+                <tr>
+                  <td data-row="4" data-col="0"></td>
+                  <td data-row="4" data-col="1">(0.293)</td>
+                </tr>
+                <tr>
+                  <td data-row="5" data-col="0">splines = ns(institutional_birth_pct, df = 3)3</td>
+                  <td data-row="5" data-col="1">−0.112</td>
+                </tr>
+                <tr>
+                  <td data-row="6" data-col="0"></td>
+                  <td data-row="6" data-col="1">(0.134)</td>
+                </tr>
+                <tr>
+                  <td data-row="7" data-col="0">anemia_prev_pct</td>
+                  <td data-row="7" data-col="1">−0.001</td>
+                </tr>
+                <tr>
+                  <td data-row="8" data-col="0"></td>
+                  <td data-row="8" data-col="1">(0.001)</td>
+                </tr>
+                <tr>
+                  <td data-row="9" data-col="0">adolescent_birth_rate</td>
+                  <td data-row="9" data-col="1">−0.000</td>
+                </tr>
+                <tr>
+                  <td data-row="10" data-col="0"></td>
+                  <td data-row="10" data-col="1">(0.000)</td>
+                </tr>
+                <tr>
+                  <td data-row="11" data-col="0">Num.Obs.</td>
+                  <td data-row="11" data-col="1">7695</td>
+                </tr>
+                <tr>
+                  <td data-row="12" data-col="0">R2</td>
+                  <td data-row="12" data-col="1">0.986</td>
+                </tr>
+                <tr>
+                  <td data-row="13" data-col="0">R2 Adj.</td>
+                  <td data-row="13" data-col="1">0.985</td>
+                </tr>
+                <tr>
+                  <td data-row="14" data-col="0">R2 Within</td>
+                  <td data-row="14" data-col="1">0.032</td>
+                </tr>
+                <tr>
+                  <td data-row="15" data-col="0">R2 Within Adj.</td>
+                  <td data-row="15" data-col="1">0.031</td>
+                </tr>
+                <tr>
+                  <td data-row="16" data-col="0">AIC</td>
+                  <td data-row="16" data-col="1">−4880.3</td>
+                </tr>
+                <tr>
+                  <td data-row="17" data-col="0">BIC</td>
+                  <td data-row="17" data-col="1">−3629.6</td>
+                </tr>
+                <tr>
+                  <td data-row="18" data-col="0">RMSE</td>
+                  <td data-row="18" data-col="1">0.17</td>
+                </tr>
+                <tr>
+                  <td data-row="19" data-col="0">Std.Errors</td>
+                  <td data-row="19" data-col="1">by: country_code</td>
+                </tr>
+                <tr>
+                  <td data-row="20" data-col="0">FE: country_code</td>
+                  <td data-row="20" data-col="1">X</td>
+                </tr>
+                <tr>
+                  <td data-row="21" data-col="0">FE: year</td>
+                  <td data-row="21" data-col="1">X</td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- postamble start -->
+  </body>
+
+</html>
+<!-- postamble end -->
+<!-- hack to avoid NA insertion in last line -->

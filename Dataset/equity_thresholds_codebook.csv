@@ -1,0 +1,11 @@
+variable,type,description
+country_code,string,ISO-like WHO country/territory code from SpatialDimensionValueCode
+country_name,string,WHO country/territory name (from COUNTRY.csv Title)
+region_code,string,"WHO region code (AFR, AMR, EMR, EUR, SEAR, WPR) from COUNTRY.csv ParentCode"
+who_region,string,WHO region name from COUNTRY.csv ParentTitle
+year,integer,Calendar year (TimeDim/TimeDimensionValue)
+maternal_mortality_ratio,numeric,"Maternal mortality ratio per 100,000 live births (MDG_0000000026)"
+institutional_birth_pct,numeric,Institutional birth coverage (%) (SRHINSTITUTIONALBIRTH.csv)
+skilled_birth_attendance_pct,numeric,Births attended by skilled health personnel (%) (MDG_0000000025)
+anemia_prev_pct,numeric,Prevalence of anemia among women of reproductive age (%) (NUTRITION_ANAEMIA_REPRODUCTIVEAGE_PREV.csv)
+adolescent_birth_rate,numeric,"Adolescent birth rate per 1,000 women aged 15–19 (MDG_0000000003)"
