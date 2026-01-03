@@ -14,7 +14,7 @@ if(length(new)) install.packages(new, dependencies = TRUE)
 invisible(lapply(req, library, character.only = TRUE))
 
 # ---- 1) Load data ----
-# Set your path to the CSV (downloaded from ChatGPT)
+# Set your path to the CSV
 # Option A (interactive): panel_path <- file.choose()
 # Option B: manual path
 panel_path <- "equity_thresholds_panel.csv"
